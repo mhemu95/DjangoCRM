@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads</title>
+</head>
+<body>
+    <nav> <a href="{% url 'leads:leadList' %}">Go Back</a> </nav>
+    <div class="container">
+        <h3> Details of {{details.first_name}} {{details.last_name}} </h3>
+        <p>
+            age of the lead: {{details.age}} <br>
+            agent handling the lead: {{details.agent}} <br>
+        </p>
+    </div>
+
+</body>
+</html>
