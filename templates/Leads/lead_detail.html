@@ -8,13 +8,16 @@
 </head>
 <body>
     <nav> <a href="{% url 'leads:leadList' %}">Go Back</a> </nav>
+    <hr>
     <div class="container">
         <h3> Details of {{details.first_name}} {{details.last_name}} </h3>
         <p>
             age of the lead: {{details.age}} <br>
             agent handling the lead: {{details.agent}} <br>
         </p>
+        <hr>
         <a href=" {% url 'leads:leadUpdate' details.pk %} ">update lead</a>
+        <a href=" {% url 'leads:leadDelete' details.pk %} ">delete lead</a>
     </div>
 
 </body>

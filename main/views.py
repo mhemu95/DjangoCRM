@@ -47,3 +47,9 @@ def Lead_update(request, pk):
         "form":form,
     }
     return render(request, "Leads/lead_update.html", context)
+
+
+def Lead_delete(request, pk):
+    lead = Lead.objects.get(pk=pk)
+    lead.delete()
+    return redirect("leads:leadList")
