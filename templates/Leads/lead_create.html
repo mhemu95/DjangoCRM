@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead Create</title>
-</head>
-<body>
-    <nav>
-        <a href=" {% url 'leads:leadList' %} "> Go Back </a>
-    </nav>
+{% extends "base.html" %}
+
+{% block title %}
+    CRM | Create
+{% endblock title %}
+
+{% block content %}
+
     <h2>create a lead here...</h2>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Create</button>
     </form>
+
+{% endblock content %}
 
 </body>
 </html>
