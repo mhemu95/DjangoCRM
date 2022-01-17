@@ -9,11 +9,11 @@
     <div class="container">
         <h2> All leads list </h2>
         <p>
-            <ul>
-                {% for lead in leads %}
-                    <a href="{% url 'leads:leadDetail' lead.pk %}"> <li> {{lead.first_name}} {{lead.last_name}} </li> </a>
-                {% endfor %}
-            </ul>
+        <ol class="list-group list-group-numbered">
+            {% for lead in leads %}
+                <li class="list-group-item"><a href="{% url 'leads:leadDetail' lead.pk %}">{{lead.first_name}} {{lead.last_name}}</a></li>
+            {% endfor %}
+        </ol>
         </p>
     </div>
 {% endblock content %}

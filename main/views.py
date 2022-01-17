@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Lead
 from .forms import LeadModelForm
 
+
 # Create your views here.
 def Lead_list(request):
     leads = Lead.objects.all()

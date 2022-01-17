@@ -14,8 +14,8 @@
             agent handling the lead: {{details.agent}} <br>
         </p>
         <hr>
-        <a href=" {% url 'leads:leadUpdate' details.pk %} ">update lead</a>
-        <a href=" {% url 'leads:leadDelete' details.pk %} ">delete lead</a>
+        <a href=" {% url 'leads:leadUpdate' details.pk %} "><button> update lead </button></a>
+        <a href=" {% url 'leads:leadDelete' details.pk %} "><button> delete lead </button></a>
     </div>
 {% endblock content %}
 
