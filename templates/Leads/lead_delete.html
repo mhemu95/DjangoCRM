@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <p> Are you sure, you want to delete the lead "{{lead}}"? </p>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+        <a href=" {{request.META.HTTP_REFERER}} "><button>Cancel</button></a>
+    </div>
+{% endblock content %}

@@ -52,5 +52,7 @@ def Lead_update(request, pk):
 
 def Lead_delete(request, pk):
     lead = Lead.objects.get(pk=pk)
-    lead.delete()
-    return redirect("leads:leadList")
+    if request.method == 'POST':
+        lead.delete()
+        return redirect("leads:leadList")
+    return render(request, "Leads/lead_delete.html", {"lead": lead})

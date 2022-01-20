@@ -5,13 +5,16 @@
 {% endblock title %}
 
 {% block content %}
-
-    <h2>create a lead here...</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Create</button>
-    </form>
+    <div class="container">
+        <h2>create a lead here...</h2>
+        <p>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Create</button>
+            </form>
+        </p>
+    </div>
 
 {% endblock content %}
 

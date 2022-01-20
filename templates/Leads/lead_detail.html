@@ -8,10 +8,11 @@
 
     <hr>
     <div class="container">
-        <h3> Details of {{details.first_name}} {{details.last_name}} </h3>
-        <p>
+        <h3> Details of <b>{{details.first_name}} {{details.last_name}}</b> </h3>
+        <p class="container">
             age of the lead: {{details.age}} <br>
-            agent handling the lead: {{details.agent}} <br>
+            agent of the lead: <b>{{details.agent}}</b> <br>
+            last updated: {{details.updated_at}} <br>
         </p>
         <hr>
         <a href=" {% url 'leads:leadUpdate' details.pk %} "><button> update lead </button></a>
