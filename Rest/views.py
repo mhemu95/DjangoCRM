@@ -2,13 +2,12 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-# Create your views here.
+from .models import Student
+from .serializers import StudentSerializer
 
-class TestView(APIView):
-    
+# Create your views here.
+class StudentApiView(APIView):
     def get(self, request, *args, **kwargs):
-        data = {
-            'username':'someuser',
-            'age':20
-        }
-        return response(data)
+        students = Student.objects.all()
+        serialize = StudentSerializer(students)
+        return Response(serialize.data)
