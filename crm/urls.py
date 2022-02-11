@@ -6,6 +6,6 @@ urlpatterns = [
 
     path('leads/', include('main.urls', namespace="leads")),
 
-    path('', include('Rest.urls', namespace="rest")),
+    path('api/', include('Rest.urls', namespace="rest")),
 
 ]
