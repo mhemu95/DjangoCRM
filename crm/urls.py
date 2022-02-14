@@ -8,4 +8,6 @@ urlpatterns = [
 
     path('api/', include('Rest.urls', namespace="rest")),
 
+    path('account/', include('account.urls', namespace="account")),
+
 ]
